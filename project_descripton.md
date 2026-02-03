@@ -25,13 +25,13 @@ Description: home-brew car booking, WP-based plugin.
 **Problematic features:**
 - two-way sync (creating bookings based on google calendar entry or a message from line/what's app)
 ^ this feature will have the same issue as it has with VIK. It's technically possible but highly impractical, the issue is that if this is script-based you will always have to follow a strict format like:
-
+`
 CAR:YARIS
-
 PICKUP:HKT
 DROP:CNX 
 FROM:2026-03-01 10:00 
 TO:2026-03-05 14:00 
+`
 
 And the moment you make a typo/error, the entire booking will either fail or be wrong.
 
