@@ -25,8 +25,9 @@ Description: home-brew car booking, WP-based plugin.
 **Problematic features:**
 - two-way sync (creating bookings based on google calendar entry or a message from line/what's app)
 ^ this feature will have the same issue as it has with VIK. It's technically possible but highly impractical, the issue is that if this is script-based you will always have to follow a strict format like:
+
 `
-CAR:YARIS
+Name:XYZ
 PICKUP:HKT
 DROP:CNX 
 FROM:2026-03-01 10:00 
@@ -35,4 +36,10 @@ TO:2026-03-05 14:00
 
 And the moment you make a typo/error, the entire booking will either fail or be wrong.
 
-I have thought of a way to maybe work around this 
+I have thought of a way to work around this and I could technically setup an automation via n8n platform (a platform that connects web-hooks/AI/scripts) where we send info (message/email), this triggers n8n webhook, the platform then passes the information to a bot (AI), the bot reads the information, parses it and creates the booking. There are costs for this but they aren't overly high, my estimate is 50-55 euro a month (though note that bulk of this price is n8n subscription and the platform can be used for more than just this project)
+
+^ this should in theory/technically work even on vik-rent-car, the issue is that the AI (LLM) models we have now are nowhere close to being perfect or unfaultable, they can make mistakes so you will still need a person who checks over the bookings once in a while.  
+
+
+
+**My evaluation:** Personally this is doable project for me on a 5 month deadline, 6 months would be preferable. Would obviously need to talk about expectations/feature set if there is anything unclear/missing from what I outlined. This is also a basis (V1) that can be further expanded on in the future. 
